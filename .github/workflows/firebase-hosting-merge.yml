@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: curl -O "https://github.com/gohugoio/hugo/releases/download/v0.115.4/hugo_0.115.4_linux-amd64.deb"  && sudo apt install  ./hugo_0.115.4_linux-amd64.deb && hugo version
+      - run: wget "https://github.com/gohugoio/hugo/releases/download/v0.115.4/hugo_0.115.4_linux-amd64.deb"  && sudo apt install ./hugo_0.115.4_linux-amd64.deb -y && hugo version
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
