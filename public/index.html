@@ -1,296 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="generator" content="Hugo 0.115.4">
-  
-    <title>Sumit Patel</title>
-  
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A simple, retro theme for Hugo" />
-<meta name="keywords" content="" />
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-  <meta name="robots" content="noodp" />
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.1.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.1.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<link rel="canonical" href="http://example.org/" />
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  <link rel="stylesheet" href="http://example.org/styles.css">
-
-
-
-
-
-
-
-  <link rel="shortcut icon" href="http://example.org/img/theme-colors/pink.png">
-  <link rel="apple-touch-icon" href="http://example.org/img/theme-colors/pink.png">
-
-
-
-<meta name="twitter:card" content="summary" />
-
-
-
-<meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Sumit Patel">
-<meta property="og:description" content="A simple, retro theme for Hugo" />
-<meta property="og:url" content="http://example.org/" />
-<meta property="og:site_name" content="Sumit Patel" />
-
-  
-    <meta property="og:image" content="http://example.org/img/favicon/pink.png">
-  
-
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
-
-
-
-
-
-  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Sumit Patel" />
-
-
-
-
-
-
-
-
-
-</head>
-<body class="pink">
-
-
-<div class="container center headings--one-size">
-
-  <header class="header">
-  <div class="header__inner">
-    <div class="header__logo">
-      <a href="/">
-  <div class="logo">
-    Sumit Patel
-  </div>
-</a>
-
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
-    
-      <ul class="menu menu--mobile">
-  <li class="menu__trigger">Menu&nbsp;▾</li>
-  <li>
-    <ul class="menu__dropdown">
-      
-        
-          <li><a href="/about/">About</a></li>
-        
-      
-        
-          <li><a href="/post">Post</a></li>
-        
-      
-        
-          <li><a href="/showcase">Showcase</a></li>
-        
-      
-      
-    </ul>
-  </li>
-</ul>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    
-    
-  </div>
-  
-    <nav class="navigation-menu">
-  <ul class="navigation-menu__inner menu--desktop">
-    
-      
-        
-          <li><a href="/about/" >About</a></li>
-        
-      
-        
-          <li><a href="/post" >Post</a></li>
-        
-      
-        
-          <li><a href="/showcase" >Showcase</a></li>
-        
-      
-      
-    
-  </ul>
-</nav>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-  
-</header>
-
-
-  <div class="content">
-    
-  
-    <div class="index-content framed">
-      <h1 id="hi-there">Hi there</h1>
-<p>I am Sumit Patel.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>   ❯ echo $USER
-</span></span><span style="display:flex;"><span>    sumit-patel
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   ❯ uname -o
-</span></span><span style="display:flex;"><span>      Arch Linux
-</span></span><span style="display:flex;"><span> 
-</span></span><span style="display:flex;"><span>   ❯ whoami    
-</span></span><span style="display:flex;"><span>    DevOps | Developer | Backend | Student
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#75715e"># Reach me out using... </span>
-</span></span><span style="display:flex;"><span>   ❯ mail -s <span style="color:#e6db74">&#34;Hello from..&#34;</span> sumitpatel24389@gmail.com
-</span></span></code></pre></div>
-    </div>
-  
-  <div class="posts">
-    
-    
-
-    
-    
-      
-    
-    
-
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="http://example.org/post/firefox-custom-new-tab-file/">Set custom HTML file as a new tab in Firefox</a>
-        </h1>
-
-        <div class="post-meta"><time class="post-date">2023-07-24</time><span class="post-author">Sumit Patel</span></div>
-
-        
-
-        
-
-
-        <div class="post-content">
-          
-            You might want to set up your custom HTML page which contains all the links which you want to access frequently or might want to use StartTree and something like that. [&ndash;more&ndash;]
-We will be using AutoConfig, which is used to set and lock preferences that are not covered by group policy, This requires an autoconfig.js file in the &ldquo;defaults/pref&rdquo; folder where the channel-prefs.js file is located that specifies to use autoconfig.
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/post/firefox-custom-new-tab-file/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="http://example.org/post/markdown-test/">Markdown test</a>
-        </h1>
-
-        <div class="post-meta"><span class="post-author">Sumit Patel</span></div>
-
-        
-
-        
-
-
-        <div class="post-content">
-          
-            List {{ template &ldquo;_internal/twitter_cards.html&rdquo; . }}
-item1 Item2 Bullet Block quote
-// your code here #!/bin/bash echo &#34;Hello world&#34; exit 0; Code block title css Really cool snippet pre { background: #1a1a1d; padding: 20px; border-radius: 8px; font-size: 1rem; overflow: auto; @media (--phone) { white-space: pre-wrap; word-wrap: break-word; } code { background: none !important; color: #ccc; padding: 0; font-size: inherit; } } bash Simple cool shell script #!/bin/bash echo &#34;Hello World&#34; exit 0; {{ partial &ldquo;comments.
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/post/markdown-test/">Read more →</a>
-          </div>
-        
-      </article>
-    
-      <article class="post on-list">
-        <h1 class="post-title">
-          <a href="http://example.org/post/first/">Welcome</a>
-        </h1>
-
-        <div class="post-meta"><span class="post-author">Sumit</span></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="http://example.org/tags/hello/">hello</a>&nbsp;
-            
-            #<a href="http://example.org/tags/first/">first</a>&nbsp;
-            
-          </span>
-        
-
-        
-
-
-        <div class="post-content">
-          
-            None
-          
-        </div>
-
-        
-          <div>
-            <a class="read-more button" href="/post/first/">Read more →</a>
-          </div>
-        
-      </article>
-    
-
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-  </div>
-</div>
-
-  </div>
-
-  </div>
-
-  
-    <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright">
-        <span>© 2023 Powered by <a href="https://gohugo.io">Hugo</a></span>
-    
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
-  </div>
-</footer>
-
-
-
-
-
-
-<script type="text/javascript" src="/bundle.min.js"></script>
-
-
-
-
-
-  
-</div>
-
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
