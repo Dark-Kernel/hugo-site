@@ -1,11 +1,13 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = 'terminal'
+theme = 'terminal-theme'
+paginate = 5
+
 
 
 [params]
-  contentTypeName = "posts"
+  contentTypeName = "post"
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "pink"
   # if you set this to 0, only submenu trigger will be visible
@@ -13,10 +15,21 @@ theme = 'terminal'
   # set theme to full screen width
   #fullWidthTheme = false
   # center theme with default width
-  #centerTheme = true
+  centerTheme = true
   # set a custom favicon (default is a `themeColor` square)
   # favicon = "favicon.ico"
+  enableSearch = true
+  enableInlineShortcodes = true
+  contentDir = "content/post"
+  disqusShortname = 'sumitpatel'
+  facebook = "https://www.facebook.com/theauctionqueens"
 
+[social]
+    twitter = 'sumitpatel'
+
+
+    
+    
 [languages]
   [languages.en]
     title = "Sumit Patel"
@@ -35,14 +48,14 @@ theme = 'terminal'
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/about"
+        url = "/about/"
       [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
 
       [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts"
+        identifier = "post"
+        name = "Post"
+        url = "/post"
 
